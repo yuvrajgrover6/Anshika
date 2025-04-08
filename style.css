@@ -59,7 +59,6 @@ body.letter-bg {
   animation-timing-function: ease-out;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
-}
 
 @keyframes openLetter {
   0% {
