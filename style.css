@@ -1,0 +1,100 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Georgia', serif;
+}
+
+body.landing {
+  background: url('bg.jpg') no-repeat center center fixed;
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.center button {
+  font-size: 24px;
+  padding: 15px 30px;
+  background-color: rgba(255, 105, 180, 0.9);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.center button:hover {
+  transform: scale(1.1);
+}
+
+body.letter-bg {
+  background-color: #f2e9dc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.letter-container {
+  perspective: 1200px;
+  max-width: 800px;
+  width: 90%;
+}
+
+.paper {
+  background: url('static-letter-bg.jpg') no-repeat center;
+  background-size: cover;
+  padding: 40px;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 0 30px rgba(0,0,0,0.2);
+  opacity: 0;
+  transform: rotateX(90deg) scale(0.8);
+  animation: openLetter 2.5s forwards ease-out;
+}
+
+@keyframes openLetter {
+  0% {
+    opacity: 0;
+    transform: rotateX(90deg) scale(0.8);
+  }
+  50% {
+    opacity: 1;
+    transform: rotateX(-20deg) scale(1.05);
+  }
+  100% {
+    transform: rotateX(0deg) scale(1);
+  }
+}
+
+.love {
+  color: crimson;
+  font-size: 28px;
+  font-weight: bold;
+  display: block;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.hearts {
+  font-size: 36px;
+  text-align: center;
+  animation: floatHearts 2s infinite ease-in-out;
+  margin-top: 10px;
+}
+
+@keyframes floatHearts {
+  0% { transform: translateY(0); opacity: 1; }
+  50% { transform: translateY(-10px); opacity: 0.8; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+
+.from {
+  margin-top: 30px;
+  text-align: right;
+  font-style: italic;
+}
